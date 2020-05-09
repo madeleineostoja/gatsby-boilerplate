@@ -1,0 +1,9 @@
+[build]
+  publish = "public"
+  command = "npm run build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "sameorigin"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"

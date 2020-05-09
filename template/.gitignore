@@ -1,0 +1,11 @@
+# Deps
+node_modules
+
+# Compiled
+public
+
+# Runtime
+.cache
+.env
+.DS_Store
+*.log

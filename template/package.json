@@ -25,6 +25,7 @@
     "gatsby-plugin-layout": "^1.0.0",
     "gatsby-plugin-manifest": "^2.0.0",
     "gatsby-plugin-netlify": "^2.0.0",
+    "gatsby-plugin-next-seo": "^1.5.0",
     "gatsby-plugin-notify": "^1.0.0",
     "gatsby-plugin-nprogress": "^2.0.0",
     "gatsby-plugin-offline": "^2.0.0",

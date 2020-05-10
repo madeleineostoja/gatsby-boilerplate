@@ -15,6 +15,15 @@ const CONFIG = {
     display: 'minimal-ui',
     include_favicon: false
   },
+  seo: {
+    titleTemplate: '%s ~ <%= name %>',
+    language: 'en',
+    openGraph: {
+      type: 'website',
+      locale: 'en_nz',
+      site_name: '<%= name %>'
+    }
+  },
 <% if (source === 'prismic') { -%>
   prismic: {
     repositoryName: '<%= prismic %>',
@@ -69,7 +78,11 @@ module.exports = {
       resolve: 'gatsby-plugin-layout',
       options: CONFIG.layout
     },
-    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-helmet-async',
+    {
+      resolve: 'gatsby-plugin-next-seo',
+      options: CONFIG.seo
+    },
     {
       resolve: 'gatsby-plugin-svgr',
       options: CONFIG.svgr

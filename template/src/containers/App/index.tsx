@@ -1,4 +1,5 @@
 import { css, Global } from '@emotion/core';
+import { LogoJsonLd } from 'gatsby-plugin-next-seo';
 import React, { ReactNode, useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 <% if (components.includes('toasts')) { -%>
@@ -49,36 +50,15 @@ export default function App({ children }: { children: ReactNode }) {
   return (
     <HelmetProvider>
       <Global styles={globalStyles} />
-      <Helmet>
-        {/* Site meta */}
-        <html lang="en" />
-        <meta
-          name="author"
-          content="<%= author %>"
-        />
-        <meta name="rating" content="general" />
-        <link rel="shortcut icon" href="/favicon.ico" />
 
-        {/* JSON LD meta */}
-        <script type="application/ld+json">
-          {JSON.stringify([
-            {
-              '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              '@id': '#website',
-              url: '<%= url %>',
-              name: '<%= name %>'
-            },
-            {
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              url: '<%= url %>',
-              '@id': '#organization',
-              name: '<%= name %>'
-            }
-          ])}
-        </script>
+      {/* Asset meta */}
+      <Helmet>
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Helmet>
+      <LogoJsonLd
+        logo="<%= url %>/logo.png"
+        url="<%= url %>"
+      />
 
       {/* The page */}
 <% if (components.includes('toasts')) { -%>

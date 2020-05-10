@@ -1,6 +1,6 @@
-<% if (components.includes('bloom')) { %>
 import '@tomorrow/bloom/modules/typography.css';
 import '@tomorrow/bloom/modules/ui.css';
-import './css/variables.css';
-<% } -%>
-import './base.css';
+import { variables } from './variables';
+import { base } from './base';
+
+export default [variables, base];

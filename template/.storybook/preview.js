@@ -1,16 +1,30 @@
-import { Stories } from '@storybook/addon-docs/blocks';
+import { Global } from '@emotion/core';
+import { DocsContainer, Stories } from '@storybook/addon-docs/blocks';
 import { addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
+import React from 'react';
 import icon from '../src/assets/img/icon.png';
-import '../src/containers/App/styles';
+import styles from '../src/containers/App/styles';
 
 // Change title of stories
 Stories.defaultProps = {
   title: 'Examples'
 };
 
+// Global styles
+addParameters({
+  docs: {
+    container: ({ children, context }) => (
+      <DocsContainer context={context}>
+        <Global styles={styles} />
+        {children}
+      </DocsContainer>
+    )
+  }
+});
+
 // Custom theme
-//Should be done in manager.js, but docs doesn't support yet
+// Should be done in manager.js, but docs doesn't support yet
 addParameters({
   options: {
     theme: create({

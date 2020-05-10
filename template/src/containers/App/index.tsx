@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css, Global } from '@emotion/core';
 import React, { ReactNode, useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 <% if (components.includes('toasts')) { -%>
@@ -6,7 +6,7 @@ import { ToastProvider } from 'react-toast-notifications';
 import { Toast, ToastContainer } from '../../components/Toast';
 <% } -%>
 import { msGridRows } from 'satchel-css';
-import './styles';
+import globalStyles from './styles';
 
 function customPolyfills() {
   const cssVars = {
@@ -48,6 +48,7 @@ export default function App({ children }: { children: ReactNode }) {
 
   return (
     <HelmetProvider>
+      <Global styles={globalStyles} />
       <Helmet>
         {/* Site meta */}
         <html lang="en" />

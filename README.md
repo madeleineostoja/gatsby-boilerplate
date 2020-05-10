@@ -43,4 +43,7 @@ npx sao seaneking/gatsby-boilerplate
 
 Or parse the files in `/template` with [ejs](https://ejs.co/), and pass in the variables promtped for in `/saofile.js`.
 
+---
+
+&copy; 2020 MIT license by Sean King
 

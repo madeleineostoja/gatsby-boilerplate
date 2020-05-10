@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 import React, { ReactNode, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 <% if (components.includes('toasts')) { -%>
 import { ToastProvider } from 'react-toast-notifications';
 import { Toast, ToastContainer } from '../../components/Toast';
@@ -47,7 +47,7 @@ export default function App({ children }: { children: ReactNode }) {
   `;
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         {/* Site meta */}
         <html lang="en" />
@@ -110,6 +110,6 @@ export default function App({ children }: { children: ReactNode }) {
 <% if (components.includes('toasts')) { -%>
       </ToastProvider>
 <% } -%>
-    </>
+    </HelmetProvider>
   );
 }

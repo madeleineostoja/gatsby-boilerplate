@@ -9,11 +9,11 @@ An opinionated and configurable boilerplate to quickly scaffold progressive, lig
 - Full typescript support
 - Full [Emotion](https://emotion.sh) support
 - Lightweight functional (styleless) base components
+- Internal generators for pages and components (built on [Hygen](https://hygen.io))
+- Starter CSS design system (built on [Bloom](https://bloom.style))
 - [Storybook](https://storybook.js.org/) 5 preconfigured for Gatsby
 - [Prettier](https://prettier.io) configured out of the box
 - [Netlify](https://netlify.com) deployment configuration
-- Internal generators for pages and components (built on [Hygen](https://hygen.io))
-- Starter CSS design system (built on [Bloom](https://bloom.style))
 - Lazyloaded polyfills (CSS variables, etc)
 - Development build notifications
 

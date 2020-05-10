@@ -5,7 +5,8 @@ const COMPONENTS = {
     adaptiveCarousel: 'AdaptiveCarousel',
     modal: 'Modal',
     overlay: 'Overlay',
-    toasts: 'Toast'
+    toasts: 'Toast',
+    twoup: 'TwoUp'
   },
   SOURCES = {
     prismic: [
@@ -62,6 +63,11 @@ module.exports = {
           {
             name: 'Button',
             value: 'button',
+            checked: false
+          },
+          {
+            name: 'TwoUp',
+            value: 'twoup',
             checked: false
           },
           {

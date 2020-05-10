@@ -17,7 +17,7 @@ An opinionated and configurable boilerplate to quickly scaffold progressive, lig
 - Lazyloaded polyfills (CSS variables, etc)
 - Development build notifications
 
-### Optional sources
+### Sources
 
 - [Prismic](https://prismic.io)
 - [MDX](https://mdxjs.com/)

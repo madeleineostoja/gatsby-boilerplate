@@ -24,6 +24,7 @@ An opinionated and configurable boilerplate to quickly scaffold progressive, lig
 - No source (bare project)
 
 #### Optional components
+
 - Button
 - AdaptiveCarousel
 - Forms (Range, Select, Textarea)

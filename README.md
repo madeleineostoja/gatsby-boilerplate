@@ -3,7 +3,7 @@
 An opinionated and configurable boilerplate to quickly scaffold progressive, lightweight [Gatsby](https://gatsbyjs.org) projects.
 
 
-### Features
+#### Features
 
 - 100/100 Lighthouse scores out of the box
 - Full typescript support
@@ -17,13 +17,13 @@ An opinionated and configurable boilerplate to quickly scaffold progressive, lig
 - Lazyloaded polyfills (CSS variables, etc)
 - Development build notifications
 
-### Sources
+#### Sources
 
 - [Prismic](https://prismic.io)
 - [MDX](https://mdxjs.com/)
 - No source (bare project)
 
-### Optional components
+#### Optional components
 - Button
 - AdaptiveCarousel
 - Forms (Range, Select, Textarea)

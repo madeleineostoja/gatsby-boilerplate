@@ -30,6 +30,7 @@ An opinionated and configurable boilerplate to quickly scaffold progressive, lig
 - Video
 - Modal
 - Overlay
+- TwoUp
 - Toasts
 
 ## Usage

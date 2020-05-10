@@ -3,7 +3,7 @@
 An opinionated and configurable boilerplate to quickly scaffold progressive, lightweight [Gatsby](https://gatsbyjs.org) projects.
 
 
-### Core Features
+### Features
 
 - 100/100 Lighthouse scores out of the box
 - Full typescript support

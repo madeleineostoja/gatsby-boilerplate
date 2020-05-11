@@ -1,7 +1,3 @@
-[build]
-  publish = "public"
-  command = "npm run build"
-
 [[headers]]
   for = "/*"
   [headers.values]

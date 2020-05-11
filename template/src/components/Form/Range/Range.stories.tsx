@@ -5,4 +5,7 @@ export default {
   title: 'Components/Form/Range',
   component: Range
 };
-export const Default = (props: RangeProps) => <Range {...props} />;
+
+export const Default = ({ value = 10, ...props }: RangeProps) => (
+  <Range {...{ value, ...props }} />
+);

@@ -12,7 +12,7 @@ const items = [...Array(6)].map((e, i) => (
   <AdaptiveItem
     css={css`
       width: 33.3%;
-      padding: var(--grid-gap-small);
+      padding: var(--gap-1);
     `}
     key={i}
   >

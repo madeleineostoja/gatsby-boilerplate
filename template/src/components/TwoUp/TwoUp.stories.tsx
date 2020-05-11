@@ -1,5 +1,6 @@
 import React from 'react';
 import { TwoUp, TwoUpProps } from '.';
+import { Heading } from '../Heading';
 
 export default {
   title: 'Components/TwoUp',
@@ -9,7 +10,7 @@ export default {
 const dummyContent = {
   primary: (
     <>
-      <h1>Heading</h1>
+      <Heading>Heading</Heading>
       <p>
         Neque donec volutpat quis torquent lacinia class leo sit cras diam
         malesuada dignissim faucibus sem integer praesent risus tellus senectus

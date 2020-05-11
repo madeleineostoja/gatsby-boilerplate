@@ -37,7 +37,7 @@ export function TwoUp({
   const panelStyles = css`
     @media (min-width: ${breakpoint}) {
       align-items: stretch;
-      padding: 0 var(--grid-gap) !important;
+      padding: 0 var(--gap-1) !important;
     }
   `;
 
@@ -47,7 +47,7 @@ export function TwoUp({
         css={css`
           @media (min-width: ${breakpoint}) {
             display: flex;
-            margin: 0 var(--grid-offset);
+            margin: 0 var(--gap-1-offset);
             ${centered &&
               css`
                 align-items: center;

@@ -61,7 +61,7 @@ export function AdaptiveCarousel({
   mode = 'auto',
   breakpoint = '45em',
   alignment = 'flex-start',
-  gutter = 'var(--grid-gap)',
+  gutter = 'var(--gap-1)',
   easeIn = true,
   children,
   ...attrs

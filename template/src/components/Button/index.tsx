@@ -39,14 +39,15 @@ export function Button({
       css={[
         css`
           ${reset('button')};
-          position: relative;
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          padding: 0.9em 1.25em 0.92em;
+          line-height: var(--leading-none);
+          padding: var(--spacing-0) var(--spacing-1);
           min-width: 6rem;
           transition: all 200ms ease;
-          border-radius: var(--radius-2);
+          border-radius: var(--radius-1);
+          outline: none !important;
           &:active {
             filter: brightness(80%) saturate(110%);
           }
@@ -67,7 +68,7 @@ export function Button({
           css`
             pointer-events: none;
             background: var(--color-grey-300);
-            color: var(--color-grey-700) !important;
+            color: var(--color-grey-700);
           `
       ]}
       {...(href ? { href } : {})}

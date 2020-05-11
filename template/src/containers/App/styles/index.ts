@@ -1,5 +1,4 @@
-import '@tomorrow/bloom/modules/typography.css';
-import '@tomorrow/bloom/modules/ui.css';
+import 'pollen-css';
 import { variables } from './variables';
 import { base } from './base';
 

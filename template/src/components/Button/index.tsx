@@ -66,8 +66,8 @@ export function Button({
         disabled &&
           css`
             pointer-events: none;
-            background: lightGrey !important;
-            color: darkGrey !important;
+            background: var(--color-grey-300);
+            color: var(--color-grey-700) !important;
           `
       ]}
       {...(href ? { href } : {})}

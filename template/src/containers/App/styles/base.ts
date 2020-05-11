@@ -19,7 +19,8 @@ export const base = css`
 
   body {
     position: relative;
-    font: var(--font-default);
+    font-family: var(--font-family);
+    line-height: var(--leading-normal);
     min-height: 100vh;
   }
 
@@ -29,7 +30,7 @@ export const base = css`
   h4,
   h5,
   h6 {
-    font: var(--font-heading);
+    line-height: var(--leading-small);
   }
 
   /* Strip default anchor styles */

@@ -2,7 +2,8 @@
 node_modules
 
 # Compiled
-public
+/public
+/docs
 
 # Runtime
 .cache

@@ -20,9 +20,13 @@ const CONFIG = {
     language: 'en',
     openGraph: {
       type: 'website',
-      locale: 'en_nz',
+      locale: 'en_NZ',
       site_name: '<%= name %>'
-    }
+    },
+    additionalMetaTags: [
+			{ name: 'rating', content: 'general' },
+      { property: 'author', content: '<%= author %>' }
+    ]
   },
 <% if (source === 'prismic') { -%>
   prismic: {

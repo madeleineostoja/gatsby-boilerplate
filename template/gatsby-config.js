@@ -95,6 +95,7 @@ module.exports = {
       resolve: 'gatsby-plugin-polyfill-io',
       options: CONFIG.polyfill
     },
+    'gatsby-plugin-sri',
     'gatsby-plugin-sitemap',
     {
       options: CONFIG.robots,

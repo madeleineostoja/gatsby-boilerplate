@@ -30,8 +30,9 @@ export function Heading({
     <Element
       css={[
         css`
-          font: var(--font-heading);
           font-size: var(--scale-1);
+          font-weight: var(--font-weight-semibold);
+          line-height: var(--leading-small);
         `,
         centered &&
           css`

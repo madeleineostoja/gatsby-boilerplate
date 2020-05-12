@@ -23,20 +23,4 @@ export const base = css`
     line-height: var(--leading-normal);
     min-height: 100vh;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: var(--leading-small);
-  }
-
-  /* Strip default anchor styles */
-  a {
-    text-decoration: none;
-    color: inherit;
-    outline: none;
-  }
 `;

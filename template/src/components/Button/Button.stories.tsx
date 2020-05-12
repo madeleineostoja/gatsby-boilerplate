@@ -6,12 +6,14 @@ export default {
   component: Button
 };
 
+const label = "Sign up";
+
 export const Default = (props: ButtonProps) => (
-  <Button {...props}>Click me</Button>
+  <Button {...props}>{label}</Button>
 );
 
 /** Button in a busy state (eg: while a form is submitting) */
-export const Busy = () => <Button busy={true}>Click me</Button>;
+export const Busy = () => <Button busy={true}>{label}</Button>;
 
 /** Disabled button (eg: while form has missing required inputs) */
-export const Disabled = () => <Button disabled>Click me</Button>;
+export const Disabled = () => <Button disabled>{label}</Button>;

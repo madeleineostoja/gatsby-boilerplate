@@ -1,6 +1,7 @@
 import React from 'react';
 import { TwoUp, TwoUpProps } from '.';
 import { Heading } from '../Heading';
+import { Copy } from '../Copy';
 
 export default {
   title: 'Components/TwoUp',
@@ -11,10 +12,7 @@ const dummyContent = {
   primary: (
     <>
       <Heading>Heading</Heading>
-      <p>
-        Neque donec volutpat quis torquent lacinia class leo sit cras diam
-        malesuada dignissim faucibus sem integer praesent risus tellus senectus
-      </p>
+      <Copy content="<p><%= description %></p>" />
     </>
   ),
   secondary: <img src="https://source.unsplash.com/random/900x600" />

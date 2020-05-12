@@ -5,4 +5,4 @@ export default {
   title: 'Components/Link',
   component: Link
 };
-export const Default = (props: LinkProps) => <Link {...props}>Click me</Link>;
+export const Default = (props: LinkProps) => <Link {...props}>Get in touch</Link>;

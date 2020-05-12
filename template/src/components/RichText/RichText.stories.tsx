@@ -1,10 +1,11 @@
 import React from 'react';
-import { RichText, RichTextProps } from '.';
+import { RichText } from '.';
 
 export default {
   title: 'Components/RichText',
   component: RichText
 };
-export const Default = ({
-  content = '<p>An HTML paragraph of text</p>'
-}: RichTextProps) => <RichText {...{ content }} />;
+
+const content = '<p><%= description %></p>';
+
+export const Default = () => <RichText content={content} />;

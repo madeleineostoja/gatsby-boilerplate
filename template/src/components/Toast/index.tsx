@@ -24,7 +24,6 @@ export function ToastContainer({ hasToasts, ...props }: ToastContainerProps) {
         position: fixed;
         bottom: 0;
         right: 0;
-        padding: 1.5rem;
         z-index: var(--layer-top);
       `}
       style={{
@@ -44,6 +43,7 @@ export function Toast({ children, transitionState, ...props }: ToastProps) {
         background: var(--color-black);
         color: white;
         padding: 1rem 1.5rem;
+        margin: 1.5rem;
         border-radius: var(--radius-2);
         white-space: nowrap;
         transition: transform 200ms var(--easing-standard);

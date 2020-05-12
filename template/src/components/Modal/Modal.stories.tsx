@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Modal, ModalProps } from '.';
 import { css } from '@emotion/core';
+import { Heading } from '../Heading';
+import { Copy } from '../Copy';
 
 export default {
   title: 'Components/Modal',
@@ -22,11 +24,10 @@ export const Default = () => {
         open={isOpen}
         onClose={() => setIsOpen(false)}
       >
-        <h1>Modal</h1>
-        <p>
-          Egestas porta donec suscipit tempor aenean ultricies senectus
-          fringilla taciti
-        </p>
+        <Heading>Modal</Heading>
+        <Copy
+          content="<p>Egestas porta donec suscipit tempor aenean ultricies senectusfringilla taciti</p>"
+        />
       </Modal>
     </>
   );

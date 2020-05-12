@@ -2,7 +2,7 @@ import { Location } from '@reach/router';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 import React from 'react';
-import { resolveUrl } from '../../lib/utils';
+import { resolveUrl } from '../lib/utils';
 
 export type MetaProps = {
   /** Page title */

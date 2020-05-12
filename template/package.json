@@ -7,9 +7,9 @@
   "private": true,
   "scripts": {
     "develop": "gatsby develop -H 0.0.0.0 -p 3000",
-    "develop:docs": "start-storybook -p 3002 -s ./static --ci --quiet --docs",
+    "develop:docs": "NODE_ENV=test start-storybook -p 3002 -s ./static --ci --quiet --docs",
     "build": "gatsby build",
-    "build:docs": "NODE_ENV=production build-storybook -o ./docs -s ./static --quiet --docs",
+    "build:docs": "NODE_ENV=test build-storybook -o ./docs -s ./static --quiet --docs",
     "generate": "hygen new",
     "clean": "gatsby clean"
   },

@@ -1,34 +1,33 @@
 import { css } from '@emotion/core';
-import React, { HTMLProps } from 'react';
-import ReactSelect from 'react-select';
-
-export type SelectProps = {
-  options: { value: string; label: string }[];
-} & HTMLProps<HTMLSelectElement>;
+import React from 'react';
+import ReactSelect, { Styles } from 'react-select';
+import { SelectComponentsProps } from 'react-select/src/Select';
 
 /**
  * Custom select form input
  */
-export function Select({ options, ...props }: SelectProps) {
-  return (
-    <ReactSelect
-      css={css`
-        & .select__indicator-separator {
-          display: none;
-        }
-        & .select__control {
-          border: 1px solid grey;
-          box-shadow: none;
-        }
-        & .select__value-container {
-          padding: 0.75em 0.6em 0.6em;
-        }
-        & .select__option {
-          font: inherit;
-        }
-      `}
-      {...{ options, props }}
-      classNamePrefix="select"
-    />
-  );
+export function Select(props: SelectComponentsProps) {
+  const styles = {
+    control: (provided, { isFocused }) => css`
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      border-color: ${isFocused
+        ? 'var(--color-blue-700)'
+        : 'var(--color-grey-300)'};
+    `,
+    indicatorSeparator: () => css`
+      display: none;
+    `,
+    option: (provided, { isFocused, isSelected }) => css`
+      padding: var(--spacing-00);
+      &:hover {
+        background: var(--color-blue-300);
+      }
+      background: ${isFocused || isSelected ? 'var(--color-blue-300)' : ''};
+    `
+  } as Styles;
+
+  return <ReactSelect {...{ styles, ...props }} />;
 }

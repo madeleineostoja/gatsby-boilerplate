@@ -1,5 +1,6 @@
 import React from 'react';
-import { Select, SelectProps } from '.';
+import { SelectComponentsProps } from 'react-select/src/Select';
+import { Select } from '.';
 
 export default {
   title: 'Components/Form/Select',
@@ -17,4 +18,4 @@ export const Default = ({
   ],
   placeholder = 'Favourite animal',
   ...props
-}: SelectProps) => <Select {...{ options, placeholder, ...props }} />;
+}: SelectComponentsProps) => <Select {...{ options, placeholder, ...props }} />;

@@ -5,7 +5,7 @@ import TextArea from 'react-textarea-autosize';
 
 export type TextareaProps = {
   rows?: number;
-};
+} & any;
 
 /**
  * Controlled text area that grows based on input

@@ -5,4 +5,6 @@ export default {
   title: 'Components/Form/Textarea',
   component: Textarea
 };
-export const Default = (props: TextareaProps) => <Textarea {...props} />;
+export const Default = (props: TextareaProps) => (
+  <Textarea placeholder="Type a message" {...props} />
+);

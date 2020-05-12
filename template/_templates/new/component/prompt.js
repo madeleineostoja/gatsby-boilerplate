@@ -4,10 +4,9 @@ function transformPropsString(props) {
     let vals = prop.replace(/\(.*\)$/, '').split(':');
 
     return {
-      name: vals[0].replace(/(\?)$/, ''),
+      name: vals[0],
       type: vals[1],
-      description: !!description && description[1],
-      optional: /(\?)$/.test(vals[0])
+      description: !!description ? description[1] : 'No description'
     };
   };
 

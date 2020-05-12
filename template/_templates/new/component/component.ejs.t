@@ -2,13 +2,13 @@
 to: src/components/<%= name %>/index.tsx
 ---
 import { css } from '@emotion/core';
-import React, { HTMLProps } from 'react';
-
+import React<% if (locals.props) { %>, { HTMLProps }<% } %> from 'react';
 <% if (locals.props) { -%>
+
 export type <%= name %>Props = {
 <% props.forEach(prop => { -%>
-  /** <%= prop.description ? prop.description : 'No description'  %> */
-  <%= prop.name %><%= prop.optional ? '?' :'' %>: <%= prop.type %>;
+  /** <%= prop.description %> */
+  <%= prop.name %>: <%= prop.type %>;
 <% }) -%>
 } & HTMLProps<HTMLDivElement>;
 <% } -%>
@@ -18,13 +18,11 @@ export type <%= name %>Props = {
  */
 export function <%= name %>(<% if (locals.props) { %>{
 <% props.forEach(prop => { -%>
-  <%= prop.name %>,
+  <%= prop.name.replace(/(\?)$/, '') %>,
 <% }) -%>
   ...props
 }: <%= name %>Props
-<% } else { -%>
-  props: object
-<% } -%>) {
+<% } else { -%>props: object<% } %>) {
   return (
     <div css={css``} {...props}>
 

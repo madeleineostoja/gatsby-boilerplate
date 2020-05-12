@@ -1,28 +1,30 @@
 ---
-to: src/components/<%%= name %>/index.tsx
+to: src/components/<%= name %>/index.tsx
 ---
 import { css } from '@emotion/core';
 import React, { HTMLProps } from 'react';
 
-<%% if (locals.props) { %>
-export type <%%= name %>Props = {
-<%% forEach(prop => { %>  /** <%%= prop.description ? prop.description : 'No description'  %>  */
-  <%%= prop.name %><%%= prop.optional ? '?' :'' %> : <%%= prop.type %>;
-<%% }) -%>
+<% if (locals.props) { -%>
+export type <%= name %>Props = {
+<% props.forEach(prop => { -%>
+  /** <%= prop.description ? prop.description : 'No description'  %> */
+  <%= prop.name %><%= prop.optional ? '?' :'' %>: <%= prop.type %>;
+<% }) -%>
 } & HTMLProps<HTMLDivElement>;
-<%% } -%>
+<% } -%>
 
 /**
- * <%%= description %>
+ * <%= description %>
  */
-export function <%%= name %>(<%% if (locals.props) { %>{
-  <%% forEach(prop => { %><%%= prop.name %>,
-<%% }) -%>
+export function <%= name %>(<% if (locals.props) { %>{
+<% props.forEach(prop => { -%>
+  <%= prop.name %>,
+<% }) -%>
   ...props
-}: <%%= name %>Props
-<%% } else { %>
+}: <%= name %>Props
+<% } else { -%>
   props: object
-<%% } -%>) {
+<% } -%>) {
   return (
     <div css={css``} {...props}>
 

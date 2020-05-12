@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Overlay, OverlayProps } from '.';
+import { Overlay } from '.';
+import { Button } from '../Button';
+import { Heading } from '../Heading';
 
 export default {
   title: 'Components/Overlay',
@@ -12,9 +14,9 @@ export const Default = () => {
   return (
     <>
       <button onClick={() => setIsOpen(true)}>Open Overlay</button>
-      <Overlay open={isOpen} background="black">
-        <h1 style={{ color: 'white', marginBottom: '1rem' }}>Overlay</h1>
-        <button onClick={() => setIsOpen(false)}>Close Overlay</button>
+      <Overlay open={isOpen}>
+        <Heading style={{ marginBottom: '2rem' }}>Overlay</Heading>
+        <Button onClick={() => setIsOpen(false)}>Close Overlay</Button>
       </Overlay>
     </>
   );

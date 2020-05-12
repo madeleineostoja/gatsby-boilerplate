@@ -3,11 +3,11 @@ to: "src/<%= isTemplate ? 'templates' : 'pages' %>/<%= type %>.tsx"
 ---
 <% Class = h.inflection.classify(type) -%>
 import { css } from '@emotion/core';
-import { graphql, PageProps } from 'gatsby';
+import { graphql } from 'gatsby';
 import React from 'react';
-import { Meta } from '../../components/Meta';
+import { Meta } from '../components/Meta';
 import { <%= Class %>Query } from '../../types/queries';
-import { usePreview } from '../../lib/hooks';
+import { usePreview } from '../lib/hooks';
 
 export default function <%= Class %><%= isTemplate ? 'Template' : 'Page' %>({ data: query }: { data: <%= Class %>Query }){
   const { prismic<%= Class %> } = usePreview(query),

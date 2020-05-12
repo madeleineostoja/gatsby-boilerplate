@@ -23,7 +23,7 @@ export function ToastContainer({ hasToasts, ...props }: ToastContainerProps) {
       css={css`
         position: fixed;
         bottom: 0;
-        right: 5rem;
+        right: 0;
         padding: 1.5rem;
         z-index: var(--layer-top);
       `}
@@ -41,8 +41,8 @@ export function Toast({ children, transitionState, ...props }: ToastProps) {
       css={css`
         font: var(--font-ui);
         font-size: var(--scale-00);
-        background: var(--color-grey-700);
-        color: var(--color-text);
+        background: var(--color-black);
+        color: white;
         padding: 1rem 1.5rem;
         border-radius: var(--radius-2);
         white-space: nowrap;

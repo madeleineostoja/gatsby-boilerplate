@@ -16,7 +16,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.0",
     "@svgr/webpack": "^4.1.0",
-    "css-vars-ponyfill": "^1.17.0",
     "gatsby": "^2.3.0",
     "gatsby-image": "^2.0.0",
     "gatsby-plugin-emotion": "^4.0.0",

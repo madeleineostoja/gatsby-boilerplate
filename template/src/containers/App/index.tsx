@@ -1,5 +1,6 @@
 import { css, Global } from '@emotion/core';
 import { LogoJsonLd } from 'gatsby-plugin-next-seo';
+import { shimmie } from 'pollen-css/utils';
 import React, { ReactNode, useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 <% if (components.includes('toasts')) { -%>
@@ -10,17 +11,9 @@ import { msGridRows } from 'satchel-css';
 import globalStyles from './styles';
 
 function customPolyfills() {
-  const cssVars = {
-    test:
-      ((window || {}).CSS || {}).supports && window.CSS.supports('(--a: 0)'),
-    config: {
-      watch: true,
-      updateURLs: false,
-      onComplete() {
-        setTimeout(() => (document.body.style.visibility = 'visible'), 10);
-      }
-    }
-  };
+  useEffect(() => {
+    shimmie();
+  }, []);
 
   if (!cssVars.test) {
     document.body.style.visibility = 'hidden';

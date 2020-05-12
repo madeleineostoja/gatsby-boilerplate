@@ -45,9 +45,6 @@ const CONFIG = {
   polyfill: {
     features: ['IntersectionObserver'],
   },
-  svgr: {
-    icon: false
-  },
   nprogress: {
     color: '<%= brandColor %>',
     showSpinner: false
@@ -87,10 +84,7 @@ module.exports = {
       resolve: 'gatsby-plugin-next-seo',
       options: CONFIG.seo
     },
-    {
-      resolve: 'gatsby-plugin-svgr',
-      options: CONFIG.svgr
-    },
+    'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-plugin-nprogress',
       options: CONFIG.nprogress

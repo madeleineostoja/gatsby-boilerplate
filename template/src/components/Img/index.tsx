@@ -1,10 +1,8 @@
 import { css, Global, keyframes } from '@emotion/core';
 import { FluidObject } from 'gatsby-image';
-import GatsbyImg, {
-  GatsbyImageWithIEPolyfillProps
-} from 'gatsby-image/withIEPolyfill';
+import GatsbyImg from 'gatsby-image/withIEPolyfill';
 import mediumZoom from 'medium-zoom';
-import React, { useEffect, useRef, useState, HTMLProps } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 declare global {
   interface Window {
@@ -60,7 +58,7 @@ export function Img({
       window._imgZoomable = mediumZoom();
       window._imgZoomable.update({
         margin: 45,
-        background: 'var(--color-black)'
+        background: 'white'
       });
     }
 
@@ -93,6 +91,7 @@ export function Img({
           fluid={fluid}
           alt={alt}
           objectFit={cover ? 'cover' : 'fill'}
+          objectPosition="center"
           onLoad={() => setLoaded(true)}
           {...props}
         />
@@ -100,18 +99,15 @@ export function Img({
         <div {...props}>
           <img
             ref={imageElement}
-            css={[
-              css`
-                vertical-align: middle;
-                max-width: 100%;
-                max-height: 100%;
-              `,
+            css={
               cover &&
-                css`
-                  object-fit: cover;
-                  width: 100%;
-                `
-            ]}
+              css`
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+              `
+            }
             src={url}
             alt={alt}
           />

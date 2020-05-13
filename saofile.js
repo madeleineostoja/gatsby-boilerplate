@@ -4,7 +4,6 @@ const COMPONENTS = {
     button: 'Button',
     adaptiveCarousel: 'AdaptiveCarousel',
     modal: 'Modal',
-    overlay: 'Overlay',
     toasts: 'Toast',
     twoup: 'TwoUp'
   },
@@ -83,11 +82,6 @@ module.exports = {
           {
             name: 'AdaptiveCarousel',
             value: 'adaptiveCarousel',
-            checked: false
-          },
-          {
-            name: 'Overlay',
-            value: 'overlay',
             checked: false
           },
           {

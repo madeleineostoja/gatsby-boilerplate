@@ -5,9 +5,9 @@ import { Heading } from '../Heading';
 
 export default {
   title: 'Components/Overlay',
-  component: Overlay,
-  decorators: [(story: any) => <div style={{ height: '50rem' }}>{story()}</div>]
+  component: Overlay
 };
+
 export const Default = () => {
   const [isOpen, setIsOpen] = useState(false);
 

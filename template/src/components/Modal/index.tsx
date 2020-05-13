@@ -1,6 +1,6 @@
-import { css, Global } from '@emotion/core';
+import { css } from '@emotion/core';
 import React, { ReactNode } from 'react';
-import ReactModal from 'react-modal';
+import { Overlay } from '../Overlay';
 
 export type ModalProps = {
   /** Whether modal is open */
@@ -17,67 +17,24 @@ export type ModalProps = {
 export function Modal({ open, onClose, children, ...props }: ModalProps) {
   return (
     <>
-      <Global
-        styles={css`
-          .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 8vw;
-            overflow: scroll;
-            z-index: var(--layer-top);
-          }
-
-          /**
-           * Transitions
-           */
-          .modal,
-          .modal-overlay {
-            transition: opacity 300ms var(--easing-standard);
-          }
-
-          .modal,
-          .modal-overlay.open,
-          .modal-overlay.open.closing .modal,
-          .modal-overlay.open .modal {
-            opacity: 1;
-          }
-
-          .modal-overlay,
-          .modal-overlay.open.closing) {
-            opacity: 0;
-          }
-        `}
-      />
-      <ReactModal
-        className="modal"
+      <Overlay
+        closeOnClick
         css={css`
-          display: inline-block;
-          position: relative;
-          outline: none !important;
-          width: 100%;
+          background: rgba(0, 0, 0, 0.3);
         `}
-        overlayClassName={{
-          base: 'modal-overlay',
-          afterOpen: 'open',
-          beforeClose: 'closing'
-        }}
-        isOpen={open}
-        onRequestClose={onClose}
-        shouldCloseOnEsc={true}
-        shouldCloseOnOverlayClick={true}
-        closeTimeoutMS={500}
-        ariaHideApp={false}
-        {...props}
+        {...{ open, onClose }}
       >
-        {children}
-      </ReactModal>
+        <div
+          css={css`
+            align-self: center;
+            justify-self: center;
+            width: 100%;
+          `}
+          {...props}
+        >
+          {children}
+        </div>
+      </Overlay>
     </>
   );
 }

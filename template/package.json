@@ -49,7 +49,6 @@
     "react-helmet-async": "^1.0.0",
 <% if (components.includes('adaptiveCarousel')) { -%>
     "react-intersection-observer": "^8.26.0",
-    "react-spring": "^8.0.0",
 <% } -%>
 <% if (components.includes('form')) { -%>
     "react-textarea-autosize": "^7.1.0",
@@ -62,9 +61,8 @@
 <% if (components.includes('video')) { -%>
     "react-player": "^1.12.0",
 <% } -%>
-<% if (components.includes('modal')) { -%>
-    "react-modal": "^3.11.0",
-<% } -%>
+    "react-spring": "^8.0.0",
+    "react-portal": "^4.2.0",
     "react-responsive": "^8.0.0",
     "react-use": "^10.1.0",
     "satchel-css": "^0.8.0"
@@ -80,9 +78,7 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-headroom": "^2.2.0",
-<% if (components.includes('modal')) { -%>
-    "@types/react-modal": "^3.10.0",
-<% } -%>
+    "@types/react-portal": "^4.0.2",
     "@types/react-responsive": "^8.0.2",
 <% if (components.includes('toasts')) { -%>
     "@types/react-toast-notifications": "^2.4.0",

@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useRef } from 'react';
 import { Portal } from 'react-portal';
 import { animated, useTransition } from 'react-spring';
 import { useKey } from 'react-use';
@@ -10,8 +10,10 @@ export type OverlayProps = {
   open: boolean;
   /** Z-index of the overlay */
   layer?: string | number;
+  /** Whether to close the overlay when clicked */
+  closeOnClick?: boolean;
   /** Action when overlay closes */
-  onRequestClose?(): void;
+  onClose?(): void;
   /** Content of the overlay */
   children: ReactNode;
 };
@@ -22,7 +24,8 @@ export type OverlayProps = {
 export function Overlay({
   open,
   layer = 'var(--layer-top)',
-  onRequestClose,
+  closeOnClick,
+  onClose = () => null,
   children,
   ...attrs
 }: OverlayProps) {
@@ -36,11 +39,12 @@ export function Overlay({
         friction: 15
       }
     }),
-    portal = document.createElement('div');
+    portal = useRef(null);
 
-  portal.style.position = 'relative';
-  portal.style.zIndex = layer.toString();
-  document.body.appendChild(portal);
+  if (portal && portal.current) {
+    portal.current.defaultNode.style.position = 'relative';
+    portal.current.defaultNode.style.zIndex = layer;
+  }
 
   if (open) {
     lockScroll(true);
@@ -48,10 +52,10 @@ export function Overlay({
     lockScroll(false);
   }
 
-  useKey('Escape', onRequestClose);
+  useKey('Escape', onClose);
 
   return (
-    <Portal node={portal}>
+    <Portal ref={portal}>
       {transitions.map(({ item: isOpen, key, props }) => (
         <animated.div
           css={css`
@@ -65,8 +69,8 @@ export function Overlay({
               css={css`
                 position: fixed;
                 display: grid;
-                background: white;
                 grid-template-columns: var(--content-grid);
+                background: white;
                 top: 0;
                 left: 0;
                 width: 100%;
@@ -77,6 +81,14 @@ export function Overlay({
                   grid-column: 2 / 3;
                 }
               `}
+              onClick={e => {
+                if (closeOnClick) {
+                  e.preventDefault();
+                  if (e.target === e.currentTarget) {
+                    onClose();
+                  }
+                }
+              }}
               {...attrs}
             >
               {children}

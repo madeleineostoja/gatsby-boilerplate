@@ -19,7 +19,6 @@
     "gatsby": "^2.3.0",
     "gatsby-image": "^2.0.0",
     "gatsby-plugin-emotion": "^4.0.0",
-    "gatsby-plugin-graphql-codegen": "^2.7.0",
     "gatsby-plugin-layout": "^1.0.0",
     "gatsby-plugin-manifest": "^2.0.0",
     "gatsby-plugin-netlify": "^2.0.0",
@@ -35,6 +34,7 @@
     "gatsby-plugin-sitemap": "^2.0.0",
     "gatsby-plugin-sri": "^1.1.0",
     "gatsby-plugin-svgr": "^2.0.0",
+    "gatsby-plugin-typegen": "^2.1.0",
     "gatsby-plugin-typescript": "^2.4.0",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.0",
 <% if (source === 'prismic') { -%>
@@ -98,6 +98,7 @@
     "fork-ts-checker-webpack-plugin": "^4.1.0",
     "hygen": "^5.0.0",
     "prettier": "^1.18.0",
+    "ts-graphql-plugin": "^1.12.0",
     "ts-loader": "^7.0.0",
     "typescript": "^3.8.0"
   }

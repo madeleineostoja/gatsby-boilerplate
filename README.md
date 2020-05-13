@@ -9,6 +9,7 @@ An opinionated and configurable boilerplate to quickly scaffold progressive, lig
 - Full typescript support
 - Full [Emotion](https://emotion.sh) support
 - Lightweight functional (styleless) base components
+- Automatic type generation and editor integration for GraphQL
 - Internal generators for pages and components (built on [Hygen](https://hygen.io))
 - Starter CSS design system (built on [Bloom](https://bloom.style))
 - [Storybook](https://storybook.js.org/) 5 preconfigured for Gatsby

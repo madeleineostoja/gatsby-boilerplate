@@ -32,12 +32,19 @@ const CONFIG = {
   prismic: {
     repositoryName: '<%= prismic %>',
     linkResolver: () => resolveDocument,
-    schemas: {}
+    schemas: {
+      // home: require('./schemas/home.json')
+    }
   },
 <% } -%>
   typeGen: {
-    fileName: `./types/queries.d.ts`,
-    documentPaths: ['./src/**/*.{ts,tsx}', './.cache/fragments/*.js'],
+    outputPath: `./types/gatsby.d.ts`,
+    emitSchema: {
+      './schemas/_generated/gatsby.json': true
+    },
+    emitPluginDocuments: {
+      './schemas/_generated/gatsby.graphql': true
+    }
   },
   layout: {
     component: require.resolve(`./src/containers/App/index.tsx`)
@@ -66,8 +73,8 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-emotion',
     {
-      resolve: 'gatsby-plugin-graphql-codegen',
-      options: CONFIG.typeGen,
+      resolve: 'gatsby-plugin-typegen',
+      options: CONFIG.typeGen
     },
 <% if (source === 'prismic') { -%>
     {

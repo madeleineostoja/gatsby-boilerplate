@@ -13,5 +13,12 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true
   },
-  "include": ["./src/**/*", "types/**/*"]
+  "include": ["./src/**/*", "types/**/*"],
+  "plugins": [
+    {
+      "name": "ts-graphql-plugin",
+      "schema": "schemas/_generated/gatsby.json",
+      "tag": "graphql"
+    }
+  ]
 }

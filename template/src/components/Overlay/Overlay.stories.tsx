@@ -15,8 +15,10 @@ export const Default = () => {
     <>
       <button onClick={() => setIsOpen(true)}>Open Overlay</button>
       <Overlay open={isOpen}>
-        <Heading style={{ marginBottom: '2rem' }}>Overlay</Heading>
-        <Button onClick={() => setIsOpen(false)}>Close Overlay</Button>
+        <div style={{ padding: '3rem 0' }}>
+          <Heading style={{ marginBottom: '2rem' }}>Overlay</Heading>
+          <Button onClick={() => setIsOpen(false)}>Close Overlay</Button>
+        </div>
       </Overlay>
     </>
   );

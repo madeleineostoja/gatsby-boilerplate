@@ -22,8 +22,8 @@ export function Meta({
   cover = 'cover.jpg',
   ...props
 }: MetaProps) {
-  const { site } = useStaticQuery(graphql`
-    query {
+  const { site } = useStaticQuery<GatsbyTypes.MetaQuery>(graphql`
+    query Meta {
       site {
         siteMetadata {
           siteUrl
@@ -35,10 +35,9 @@ export function Meta({
   return (
     <Location>
       {({ location }) => {
-        const { siteUrl } = site.siteMetadata,
-          resolvedCover = resolveUrl(cover, siteUrl),
+        const { siteUrl } = site!.siteMetadata!,
+          resolvedCover = resolveUrl(cover, siteUrl || ''),
           resolvedLocation = `${siteUrl}${location.pathname}`;
-
         return (
           <GatsbySeo
             title={title}

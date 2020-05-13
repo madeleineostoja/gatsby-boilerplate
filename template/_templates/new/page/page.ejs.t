@@ -13,12 +13,15 @@ export default function <%= Class %><%= isTemplate ? 'Template' : 'Page' %>({ da
   const { prismic<%= Class %> } = usePreview(query),
     { data } = prismic<%= Class %>;
 
-  return !!data ? (
+  if (!data) {
+    return null;
+  }
+
+  return (
     <>
       <Meta  title={data.meta_title} description={data.meta_description} />
-
     </>
-  ) : null;
+  );
 }
 
 export const query = graphql`

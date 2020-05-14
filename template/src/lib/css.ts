@@ -1,4 +1,5 @@
 import { css } from '@emotion/core';
+import { subgrid } from 'satchel-css';
 
 /**
  * Global breakpoints
@@ -8,12 +9,11 @@ export const BREAKPOINTS = {
 };
 
 /**
- * Default link styling
+ * Subgrid with page container inheritence
  */
-export const link = css`
-  text-decoration: underline;
-  transition: opacity 150ms ease;
-  &:hover {
-    opacity: 0.8;
+export const subPageGrid = css`
+  ${subgrid}
+  & > * {
+    grid-column: 2 / 3;
   }
 `;

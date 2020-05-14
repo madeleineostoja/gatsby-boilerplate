@@ -1,14 +1,15 @@
 import { css, Global } from '@emotion/core';
+import { PageProps } from 'gatsby';
 import { LogoJsonLd } from 'gatsby-plugin-next-seo';
 import { shimmie } from 'pollen-css/utils';
-import React, { ReactNode, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { msGridRows } from 'satchel-css';
+import globalStyles from './styles';
 <% if (components.includes('toasts')) { -%>
 import { ToastProvider } from 'react-toast-notifications';
 import { Toast, ToastContainer } from '../../components/Toast';
 <% } -%>
-import { msGridRows } from 'satchel-css';
-import globalStyles from './styles';
 
 function customPolyfills() {
   useEffect(() => {
@@ -29,7 +30,7 @@ function customPolyfills() {
  * App container
  * Entrypoint for the application
  */
-export default function App({ children }: { children: ReactNode }) {
+export default function App({ children }: PageProps) {
   useEffect(customPolyfills, []);
 
   const containerStyles = css`

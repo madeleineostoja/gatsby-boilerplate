@@ -6,7 +6,6 @@ import { css } from '@emotion/core';
 import { graphql } from 'gatsby';
 import React from 'react';
 import { Meta } from '../components/Meta';
-import { <%= Class %>Query } from '../../types/queries';
 import { usePreview } from '../lib/hooks';
 
 export default function <%= Class %><%= isTemplate ? 'Template' : 'Page' %>({ data: query }: GatsbyTypes.Prismic<%= Class %> ){

@@ -9,7 +9,7 @@ import { Meta } from '../components/Meta';
 import { <%= Class %>Query } from '../../types/queries';
 import { usePreview } from '../lib/hooks';
 
-export default function <%= Class %><%= isTemplate ? 'Template' : 'Page' %>({ data: query }: GatsbyTypes.Prismic<%= Class %> }){
+export default function <%= Class %><%= isTemplate ? 'Template' : 'Page' %>({ data: query }: GatsbyTypes.Prismic<%= Class %> ){
   const { prismic<%= Class %> } = usePreview(query),
     { data } = prismic<%= Class %>;
 

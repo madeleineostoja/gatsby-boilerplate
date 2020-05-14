@@ -15,11 +15,11 @@ exports.createPages = ({ graphql, actions }) => {
   PAGES.forEach(async ({ query, type, template, pathResolver }) => {
     const { data: page } = await graphql(query);
 
-    page[type].nodes.forEach(({ uid }) => {
+    page[type].edges.forEach(({ node }) => {
       createPage({
-        path: pathResolver(uid),
+        path: pathResolver(node.uid),
         component: resolve(__dirname, template),
-        context: { uid }
+        context: { uid: node.uid }
       });
     });
   });

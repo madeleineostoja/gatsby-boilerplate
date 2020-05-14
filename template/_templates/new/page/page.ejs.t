@@ -18,13 +18,13 @@ export default function <%= Class %><%= isTemplate ? 'Template' : 'Page' %>({ da
 
   return (
     <>
-      <Meta  title={data.meta_title} description={data.meta_description} />
+      <Meta title={data.meta_title} description={data.meta_description} />
     </>
   );
 }
 
 export const query = graphql`
-  query<%= isTemplate ? '($uid: String!)' : '' %> <%= Class %> {
+  query <%= Class %><%= isTemplate ? '($uid: String!)' : '' %> {
     prismic<%= Class %><%= isTemplate ? '(uid: {eq: $uid })' : '' %> {
       data {
         meta_title

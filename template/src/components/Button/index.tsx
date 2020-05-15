@@ -1,7 +1,8 @@
 import { css } from '@emotion/core';
 import React, { HTMLProps, ReactNode } from 'react';
-import { Link, LinkProps } from '../Link';
 import { reset } from 'satchel-css';
+import { BREAKPOINTS } from '../../lib/css';
+import { Link, LinkProps } from '../Link';
 
 export type ButtonProps = {
   /** Href to link to */
@@ -54,7 +55,7 @@ export function Button({
         `,
         responsive &&
           css`
-            @media (max-width: 35em) {
+            @media (max-width: ${BREAKPOINTS.mobile}) {
               display: flex;
               width: 100%;
             }

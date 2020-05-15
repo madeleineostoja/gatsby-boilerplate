@@ -1,17 +1,9 @@
 import url from 'url';
-<% if (source === 'prismic') { -%>
-import dayjs from 'dayjs';
-import customParseFormat from 'dayjs/plugin/customParseFormat';
 
-dayjs.extend(customParseFormat);
-
-// Custom parse date strings for Safari compat
-export function dayjsPrismic(dateString: string) {
-  return dayjs(dateString, 'YYYY/MM/DD H:mm:ss');
-}
-<% } -%>
-
-// Lock body scrolling
+/**
+ * Lock body scrolling overflow
+ * @param state Whether to lock or not
+ */
 export function lockScroll(state: boolean) {
   if (typeof document === 'undefined') {
     return;
@@ -20,7 +12,11 @@ export function lockScroll(state: boolean) {
   document.documentElement.style.overflow = state ? 'hidden' : '';
 }
 
-// Resolve relative URLs
+/**
+ * Resole relative URLs against a source
+ * @param link URL to resolve
+ * @param source Source URL to resolve against
+ */
 export function resolveUrl(link: string, source: string) {
   if (!link) {
     return source;

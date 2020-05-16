@@ -6,15 +6,19 @@ import { css } from '@emotion/core';
 import { graphql } from 'gatsby';
 import React from 'react';
 import { Meta } from '../components/Meta';
+<% if (source === 'prismic') { -%>
 import { usePreview } from '../lib/hooks';
+<% } -%>
 
 export default function <%%= Class %%><%%= isTemplate ? 'Template' : 'Page' %%>({ data: query }: GatsbyTypes.Prismic<%%= Class %%> ){
+<% if (source === 'prismic') { -%>
   const { prismic<%%= Class %%> } = usePreview(query),
     { data } = prismic<%%= Class %%>;
 
   if (!data) {
     return null;
   }
+<% } -%>
 
   return (
     <>
@@ -24,6 +28,7 @@ export default function <%%= Class %%><%%= isTemplate ? 'Template' : 'Page' %%>(
 }
 
 export const query = graphql`
+<% if (source === 'prismic') { -%>
   query <%%= Class %%><%%= isTemplate ? '($uid: String!)' : '' %%> {
     prismic<%%= Class %%><%%= isTemplate ? '(uid: {eq: $uid })' : '' %%> {
       data {
@@ -32,4 +37,9 @@ export const query = graphql`
       }
     }
   }
+<% } else { -%>
+  query <%%= Class %%> {
+
+  }
+<% } -%>
 `

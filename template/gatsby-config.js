@@ -11,7 +11,7 @@ const CONFIG = {
     short_name: '<%= name %>',
     background_color: '#fff',
     theme_color: '<%= brandColor %>',
-    icon: './src/assets/img/icon.png',
+    icon: './static/icon.png',
     display: 'minimal-ui',
     include_favicon: false
   },

@@ -3,7 +3,7 @@ import { DocsContainer, Stories } from '@storybook/addon-docs/blocks';
 import { addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import React from 'react';
-import icon from '../src/assets/img/icon.png';
+import icon from '../static/icon.png';
 import styles from '../src/containers/App/styles';
 
 // Change title of stories

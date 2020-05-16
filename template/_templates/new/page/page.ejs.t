@@ -15,10 +15,10 @@ export default function <%%= Class %%><%%= isTemplate ? 'Template' : 'Page' %%>(
   const { prismic<%%= Class %%> } = usePreview(query),
     { data } = prismic<%%= Class %%>;
 
+<% } -%>
   if (!data) {
     return null;
   }
-<% } -%>
 
   return (
     <>

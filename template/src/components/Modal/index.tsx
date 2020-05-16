@@ -1,40 +1,42 @@
 import { css } from '@emotion/core';
 import React, { ReactNode } from 'react';
-import { Overlay } from '../Overlay';
+import { Overlay, OverlayProps } from 'react-portal-overlay';
 
 export type ModalProps = {
-  /** Whether modal is open */
-  open: boolean;
-  /** Action to perform when the modal is closed */
-  onClose?(): any;
+  /** Content of the modal */
+  className: string;
   /** Content of the modal */
   children: ReactNode;
-};
+} & OverlayProps;
 
 /**
  * Modal component that shows a popup in-app
  */
-export function Modal({ open, onClose, children, ...props }: ModalProps) {
+export function Modal({ children, className, ...props }: ModalProps) {
   return (
-    <>
       <Overlay
         closeOnClick
+        closeOnEsc
         css={css`
+          display: grid;
+          grid-template-columns: var(--content-grid);
           background: rgba(0, 0, 0, 0.3);
         `}
-        {...{ open, onClose }}
+        {...props}
       >
         <div
+          className={className}
           css={css`
+            grid-column: 2 / 3;
             align-self: center;
             justify-self: center;
             width: 100%;
+            background: white;
+            border-radius: var(--radius-2);
           `}
-          {...props}
         >
           {children}
         </div>
       </Overlay>
-    </>
   );
 }

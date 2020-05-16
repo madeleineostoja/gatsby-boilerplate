@@ -21,6 +21,9 @@
     "gatsby-plugin-emotion": "^4.0.0",
     "gatsby-plugin-layout": "^1.0.0",
     "gatsby-plugin-manifest": "^2.0.0",
+<% if (source === 'mdx') { -%>
+    "gatsby-plugin-mdx": "^1.2.0",
+<% } -%>
     "gatsby-plugin-netlify": "^2.0.0",
     "gatsby-plugin-next-seo": "^1.5.0",
     "gatsby-plugin-notify": "^1.0.0",
@@ -40,10 +43,12 @@
 <% if (source === 'prismic') { -%>
     "gatsby-source-prismic": "^3.0.0",
     "react-html-renderer": "^0.3.0",
-    "dayjs": "^1.8.0",
+<% } -%>
+<% if (source === 'mdx') { -%>
+    "gatsby-source-filesystem": "^2.3.0",
 <% } -%>
     "medium-zoom": "^1.0.0",
-    "pollen-css": "^0.5.0",
+    "pollen-css": "^1.0.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet-async": "^1.0.0",
@@ -61,11 +66,12 @@
 <% if (components.includes('video')) { -%>
     "react-player": "^1.12.0",
 <% } -%>
-    "react-spring": "^8.0.0",
-    "react-portal": "^4.2.0",
+<% if (components.includes('modal')) { -%>
+    "react-portal-overlay": "^1.0.0",
+<% } -%>
     "react-responsive": "^8.0.0",
     "react-use": "^10.1.0",
-    "satchel-css": "^0.8.0"
+    "satchel-css": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",

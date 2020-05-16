@@ -37,6 +37,12 @@ const CONFIG = {
     }
   },
 <% } -%>
+<% if (source === 'mdx') { -%>
+  <%= content%>: {
+    name: '<%= content %>',
+    path: `${__dirname}<%= contentPath %>/`
+  },
+<% } -%>
   typeGen: {
     outputPath: `./types/gatsby.d.ts`,
     emitSchema: {
@@ -81,6 +87,13 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: CONFIG.prismic
     },
+<% } -%>
+<% if (source === 'mdx') { -%>
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: CONFIG.<%= content %>,
+    },
+    'gatsby-plugin-mdx',
 <% } -%>
     {
       resolve: 'gatsby-plugin-layout',

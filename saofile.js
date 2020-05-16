@@ -57,7 +57,7 @@ module.exports = {
       {
         type: 'checkbox',
         name: 'components',
-        message: 'Extra components',
+        message: 'Extra components:',
         choices: [
           {
             name: 'Button',
@@ -99,8 +99,20 @@ module.exports = {
       {
         type: 'input',
         name: 'prismic',
-        message: 'Prismic repository name',
+        message: 'Prismic repository name:',
         when: ({ source }) => source === 'prismic'
+      },
+      {
+        type: 'input',
+        name: 'content',
+        message: 'Content source name:',
+        when: ({ source }) => source === 'mdx'
+      },
+      {
+        type: 'input',
+        name: 'contentPath',
+        message: 'Content folder path:',
+        when: ({ source }) => source === 'mdx'
       }
     ];
   },

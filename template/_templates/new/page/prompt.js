@@ -1,11 +1,9 @@
 module.exports = [
-<% if (source === 'prismic') { -%>
   {
     type: 'input',
     name: 'type',
-    message: 'Prismic type'
+    message: <%= source === 'prismic' ? 'Prismic type' : 'Page UID' %>
   },
-<% } -%>
   {
     type: 'confirm',
     name: 'isTemplate',

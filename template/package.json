@@ -42,7 +42,6 @@
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.0",
 <% if (source === 'prismic') { -%>
     "gatsby-source-prismic": "^3.0.0",
-    "react-html-renderer": "^0.3.0",
 <% } -%>
 <% if (source === 'mdx') { -%>
     "gatsby-source-filesystem": "^2.3.0",
@@ -52,6 +51,7 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-helmet-async": "^1.0.0",
+    "react-html-renderer": "^0.3.0",
 <% if (components.includes('adaptiveCarousel')) { -%>
     "react-intersection-observer": "^8.26.0",
 <% } -%>

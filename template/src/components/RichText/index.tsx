@@ -1,6 +1,5 @@
 import React from 'react';
 import HTML from 'react-html-renderer';
-import { link } from '../../lib/css';
 import { Heading } from '../Heading';
 import { Link } from '../Link';
 
@@ -28,7 +27,7 @@ export function RichText({ content, ...props }: RichTextProps) {
           </Heading>
         ),
         a: ({ children, ...props }: ElementProps) => (
-          <Link css={link} {...props}>
+          <Link {...props}>
             {children}
           </Link>
         )

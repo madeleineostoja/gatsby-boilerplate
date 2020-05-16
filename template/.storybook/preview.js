@@ -33,7 +33,7 @@ addParameters({
       brandUrl: '<%= url %>',
       brandImage: icon,
       colorPrimary: '<%= brandColor %>',
-      colorSecondary: '#<%= brandColor %>'
+      colorSecondary: '<%= brandColor %>'
     }),
     showRoots: true
   }

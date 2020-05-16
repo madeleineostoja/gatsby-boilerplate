@@ -1,16 +1,16 @@
 ---
-to: "src/<%= isTemplate ? 'templates' : 'pages' %>/<%= type %>.tsx"
+to: "src/<%%= isTemplate ? 'templates' : 'pages' %%>/<%%= type %%>.tsx"
 ---
-<% Class = h.inflection.classify(type) -%>
+<%% Class = h.inflection.classify(type) -%%>
 import { css } from '@emotion/core';
 import { graphql } from 'gatsby';
 import React from 'react';
 import { Meta } from '../components/Meta';
 import { usePreview } from '../lib/hooks';
 
-export default function <%= Class %><%= isTemplate ? 'Template' : 'Page' %>({ data: query }: GatsbyTypes.Prismic<%= Class %> ){
-  const { prismic<%= Class %> } = usePreview(query),
-    { data } = prismic<%= Class %>;
+export default function <%%= Class %%><%%= isTemplate ? 'Template' : 'Page' %%>({ data: query }: GatsbyTypes.Prismic<%%= Class %%> ){
+  const { prismic<%%= Class %%> } = usePreview(query),
+    { data } = prismic<%%= Class %%>;
 
   if (!data) {
     return null;
@@ -24,8 +24,8 @@ export default function <%= Class %><%= isTemplate ? 'Template' : 'Page' %>({ da
 }
 
 export const query = graphql`
-  query <%= Class %><%= isTemplate ? '($uid: String!)' : '' %> {
-    prismic<%= Class %><%= isTemplate ? '(uid: {eq: $uid })' : '' %> {
+  query <%%= Class %%><%%= isTemplate ? '($uid: String!)' : '' %%> {
+    prismic<%%= Class %%><%%= isTemplate ? '(uid: {eq: $uid })' : '' %%> {
       data {
         meta_title
         meta_description

@@ -5,33 +5,20 @@ import { shimmie } from 'pollen-css/utils';
 import React, { useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { msGridRows } from 'satchel-css';
-import globalStyles from './styles';
 <% if (components.includes('toasts')) { -%>
-import { ToastProvider } from 'react-toast-notifications';
-import { Toast, ToastContainer } from '../../components/Toast';
-<% } -%>
-
-function customPolyfills() {
-  useEffect(() => {
-    shimmie();
-  }, []);
-
-  if (!cssVars.test) {
-    document.body.style.visibility = 'hidden';
-    import(
-      /* webpackChunkName: "css-vars-ponyfill" */ 'css-vars-ponyfill'
-    ).then(({ default: cssVarsPonyfill }) => {
-      cssVarsPonyfill(cssVars.config);
-    });
-  }
-}
+  import { ToastProvider } from 'react-toast-notifications';
+  import { Toast, ToastContainer } from '../../components/Toast';
+  <% } -%>
+import globalStyles from './styles';
 
 /**
  * App container
  * Entrypoint for the application
  */
 export default function App({ children }: PageProps) {
-  useEffect(customPolyfills, []);
+  useEffect(() => {
+    shimmie();
+  }, []);
 
   const containerStyles = css`
     display: grid;

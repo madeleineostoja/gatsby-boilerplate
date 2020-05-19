@@ -5,13 +5,9 @@ import { Range as ReactRange, getTrackBackground } from 'react-range';
 export type RangeProps = {
   /** Value of the range input */
   value: number;
-  /** Minimum value of the range */
-  min?: number;
-  /** Maximum value of the range */
-  max?: number;
-  /** Function to call when value changes */
-  onChange?(value?: number): void;
-};
+  /** Value display formatter */
+  formatValue?(value: number): string;
+} & ReactRange['props'];
 
 /**
  * Custom range input

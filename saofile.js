@@ -8,7 +8,11 @@ const COMPONENTS = {
     twoup: 'TwoUp'
   },
   SOURCES = {
-    prismic: ['src/pages/preview.tsx', 'src/lib/resolve.js']
+    prismic: [
+      'src/pages/preview.tsx',
+      'src/lib/resolve.js',
+      'types/resolve.d.ts'
+    ]
   };
 
 module.exports = {

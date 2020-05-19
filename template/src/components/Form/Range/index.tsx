@@ -36,7 +36,7 @@ export function Range({
               colors: ['var(--color-primary)', 'var(--color-grey-100)']
             })};
           `}
-          {...props}
+          {...{min, max, ...props}}
         >
           {children}
         </div>

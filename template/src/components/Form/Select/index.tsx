@@ -1,12 +1,11 @@
 import { css } from '@emotion/core';
 import React from 'react';
 import ReactSelect, { Styles } from 'react-select';
-import { SelectComponentsProps } from 'react-select/src/Select';
 
 /**
  * Custom select form input
  */
-export function Select(props: SelectComponentsProps) {
+export function Select(props: ReactSelect['props']) {
   const styles = {
     control: (provided, { isFocused }) => css`
       display: flex;

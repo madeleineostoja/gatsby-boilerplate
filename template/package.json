@@ -50,6 +50,7 @@
     "pollen-css": "^1.0.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
+    "react-hamburger-icon": "^1.0.0",
     "react-helmet-async": "^1.0.0",
     "react-html-renderer": "^0.3.0",
 <% if (components.includes('adaptiveCarousel')) { -%>

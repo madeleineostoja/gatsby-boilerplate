@@ -1,10 +1,30 @@
 import { Meta, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
+import { HamburgerIcon } from 'react-hamburger-icon';
 
 <Meta title="Brand/Icons" />
 
 # Icons
 
 <br />
+
+### Brand
+
 <IconGallery>
-  <IconItem name=""></IconItem>
+  <IconItem name="Favicon">
+    <img src="/favicon.ico" />
+  </IconItem>
+  <IconItem name="App icon">
+    <img src="/icon.png" />
+  </IconItem>
+</IconGallery>
+
+### UI
+
+<IconGallery>
+  <IconItem name="Menu">
+    <HamburgerIcon />
+  </IconItem>
+  <IconItem name="Menu/Close">
+    <HamburgerIcon open />
+  </IconItem>
 </IconGallery>

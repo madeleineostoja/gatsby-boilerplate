@@ -15,7 +15,7 @@ function transformPropsString(props) {
   }
 
   return props
-    .split(', ')
+    .split(';')
     .map(propString => propString.trim())
     .map(objectify);
 }
@@ -34,7 +34,7 @@ module.exports = [
   {
     type: 'input',
     name: 'props',
-    message: 'Props :: [prop]:[type](description)',
+    message: 'Props :: [prop]:[type](description);',
     result: transformPropsString
   }
 ];

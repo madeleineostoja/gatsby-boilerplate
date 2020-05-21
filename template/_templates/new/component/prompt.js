@@ -15,7 +15,7 @@ function transformPropsString(props) {
   }
 
   return props
-    .split(',')
+    .split(', ')
     .map(propString => propString.trim())
     .map(objectify);
 }

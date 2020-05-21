@@ -7,10 +7,9 @@ export default {
   component: Video
 };
 
-export const Default = ({
-  src = 'https://vimeo.com/channels/staffpicks/55073825',
-  ...props
-}: VideoProps) => (
+const video = 'https://vimeo.com/channels/staffpicks/310781983';
+
+export const Default = ({ src = video, ...props }: VideoProps) => (
   <Video
     css={css`
       width: 100%;
@@ -21,10 +20,7 @@ export const Default = ({
 
 /** Show a placeholder image and delay loading the video. Results in better performance */
 export const Placeholder = () => (
-  <Video
-    src="https://vimeo.com/channels/staffpicks/55073825"
-    placeholder="https://source.unsplash.com/random/900x600"
-  />
+  <Video src={video} placeholder="https://source.unsplash.com/random/900x600" />
 );
 
 /** Inline autoplaying video, great for backgrounds */

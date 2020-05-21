@@ -11,7 +11,7 @@
     "build": "gatsby build",
     "build:docs": "NODE_ENV=test build-storybook -o ./docs -s ./static --quiet --docs",
     "generate": "hygen new",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean && rm -rf ./docs"
   },
   "dependencies": {
     "@emotion/core": "^10.0.0",

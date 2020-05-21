@@ -63,7 +63,7 @@ const CONFIG = {
     showSpinner: false
   },
   preconnect: {
-    domains: ['https://cdn.polyfill.io'<%- source === 'prismic' ? `,'https://images.prismic.io'` : '' %><%- components.includes('video') ? `'https://vimeo.com', 'https://player.vimeo.com'` : '' %>]
+    domains: ['https://cdn.polyfill.io'<%- source === 'prismic' ? `, 'https://images.prismic.io'` : '' %><%- components.includes('video') ? `, 'https://vimeo.com', 'https://player.vimeo.com'` : '' %>]
   },
   robots: {
     policy: [{ userAgent: '*', allow: '/' }]

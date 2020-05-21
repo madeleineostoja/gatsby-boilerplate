@@ -25,5 +25,5 @@ export const Placeholder = () => (
 
 /** Inline autoplaying video, great for backgrounds */
 export const Inline = () => (
-  <Video src="https://vimeo.com/channels/staffpicks/55073825" inline autoplay />
+  <Video src={video} inline autoplay />
 );

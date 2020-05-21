@@ -4,7 +4,10 @@
     "target": "esnext",
     "module": "esnext",
     "jsx": "react",
-    <% if (source === 'prismic') { -%>"allowJs": true,<% } %>
+<% if (source === 'prismic') { -%>
+    "allowJs": true,
+    "noEmit": true,
+<% } -%>
 
     /* Type-Checking Options */
     "strict": true,

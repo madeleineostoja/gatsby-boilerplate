@@ -1,5 +1,6 @@
 import { Meta, Typeset } from '@storybook/addon-docs/blocks';
 const fontSizes = [12, 14, 16, 18, 20, 24, 30, 36, 48, 80, 96],
+  fontFamily = 'sans-serif',
   sampleText = `<%= description %>`;
 
 <Meta title="Brand/Typography" />
@@ -10,6 +11,8 @@ const fontSizes = [12, 14, 16, 18, 20, 24, 30, 36, 48, 80, 96],
 
 ## Sans Serif
 
-#### Regular
+Sans serif is pretty boring, but it's the default we're using
 
-<Typeset {...{ fontSizes, sampleText }} />
+### Regular
+
+<Typeset fontWeight={400} {...{ fontFamily, fontSizes, sampleText }} />

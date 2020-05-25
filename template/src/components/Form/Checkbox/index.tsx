@@ -33,6 +33,7 @@ export function Checkbox({ label, className, id, ...props }: CheckboxProps) {
             margin-right: 0.5em;
             border-radius: var(--radius-1);
             fill: white;
+            cursor: pointer;
             background: ${checked ? 'var(--color-blue)' : 'white'};
             border-color: ${checked
               ? 'var(--color-blue)'

@@ -1,15 +1,11 @@
 import React from 'react';
 import HTML from 'react-html-renderer';
-import { Heading } from '../Heading';
-import { Link } from '../Link';
+import { Heading, HeadingProps } from '../Heading';
+import { Link, LinkProps } from '../Link';
 
 export type RichTextProps = {
   /** HTML content to render */
   content: string;
-};
-
-type ElementProps = {
-  children: any;
 };
 
 /**
@@ -21,12 +17,12 @@ export function RichText({ content, ...props }: RichTextProps) {
       html={content}
       components={{
         h1: Heading,
-        h2: ({ children, ...props }: ElementProps) => (
+        h2: ({ children, ...props }: HeadingProps) => (
           <Heading secondary {...props}>
             {children}
           </Heading>
         ),
-        a: ({ children, ...props }: ElementProps) => (
+        a: ({ children, ...props }: LinkProps) => (
           <Link {...props}>
             {children}
           </Link>

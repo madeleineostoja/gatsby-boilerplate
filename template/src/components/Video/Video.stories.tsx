@@ -18,12 +18,10 @@ export const Default = ({ src = video, ...props }: VideoProps) => (
   />
 );
 
-/** Show a placeholder image and delay loading the video. Results in better performance */
-export const Placeholder = () => (
+export const Placeholder = () => <Video src={video} placeholder />;
+
+export const CustomPlaceholder = () => (
   <Video src={video} placeholder="https://source.unsplash.com/random/900x600" />
 );
 
-/** Inline autoplaying video, great for backgrounds */
-export const Inline = () => (
-  <Video src={video} inline autoplay />
-);
+export const Inline = () => <Video src={video} inline autoplay />;

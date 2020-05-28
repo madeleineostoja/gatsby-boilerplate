@@ -10,10 +10,6 @@ declare global {
   }
 }
 
-/**
- * Fluid image datga
- * @param {FluidObject} fluid Something
- */
 export type ImageProps = {
   /** Responsive image data */
   fluid: FluidObject;

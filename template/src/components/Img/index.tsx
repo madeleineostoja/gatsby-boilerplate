@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-export interface ImageProps extends GatsbyTypes.PrismicImageInterface {
+export interface ImageProps extends Partial<GatsbyTypes.PrismicImageInterface> {
   /** Whether the user should be able to open the image fullscreen */
   zoomable?: boolean;
   /** Whether the image should fit its box like background-size: cover */

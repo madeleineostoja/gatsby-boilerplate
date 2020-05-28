@@ -1,8 +1,7 @@
 import { css, Global, keyframes } from '@emotion/core';
-import { FluidObject } from 'gatsby-image';
 import GatsbyImg from 'gatsby-image/withIEPolyfill';
 import mediumZoom from 'medium-zoom';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { HTMLProps, useEffect, useRef, useState } from 'react';
 
 declare global {
   interface Window {
@@ -10,18 +9,12 @@ declare global {
   }
 }
 
-export type ImageProps = {
-  /** Responsive image data */
-  fluid: FluidObject;
-  /** Fallback image src URL */
-  url: string;
-  /** Alt text for the image */
-  alt?: string;
+export interface ImageProps extends GatsbyTypes.PrismicImageInterface {
   /** Whether the user should be able to open the image fullscreen */
   zoomable?: boolean;
   /** Whether the image should fit its box like background-size: cover */
   cover?: boolean;
-} & any;
+}
 
 /**
  * Supercharged images. Adaptively uses responsive source sets if data is available, falling back to a static image
@@ -33,7 +26,7 @@ export function Img({
   zoomable,
   cover,
   ...props
-}: ImageProps) {
+}: ImageProps & HTMLProps<HTMLDivElement>) {
   const imageElement = useRef<any>(null),
     [loaded, setLoaded] = useState(false),
     fadeIn = keyframes`

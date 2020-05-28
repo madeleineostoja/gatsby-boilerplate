@@ -16,7 +16,7 @@ const items = [...Array(6)].map((e, i) => (
     `}
     key={i}
   >
-    <img src="https://source.unsplash.com/random/900x600" />
+    <img src="https://source.unsplash.com/featured/900x600" />
   </AdaptiveItem>
 ));
 

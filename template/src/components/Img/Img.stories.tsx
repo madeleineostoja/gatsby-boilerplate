@@ -9,7 +9,7 @@ export default {
 };
 
 const image = {
-  url: 'https://source.unsplash.com/random/900x600',
+  url: 'https://source.unsplash.com/featured/900x600',
   alt: 'A random image'
 };
 

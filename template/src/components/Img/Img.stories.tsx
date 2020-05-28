@@ -1,7 +1,7 @@
-import React from 'react';
-import { Img, ImageProps } from '.';
 import { css } from '@emotion/core';
+import React from 'react';
 import { aspect } from 'satchel-css';
+import { ImageProps, Img } from '.';
 
 export default {
   title: 'Components/Img',

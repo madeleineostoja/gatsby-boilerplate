@@ -1,7 +1,7 @@
 import { css, Global, keyframes } from '@emotion/core';
 import GatsbyImg from 'gatsby-image/withIEPolyfill';
 import mediumZoom from 'medium-zoom';
-import React, { HTMLProps, useEffect, useRef, useState } from 'react';
+import React, { HTMLAttributes, useEffect, useRef, useState } from 'react';
 
 declare global {
   interface Window {
@@ -26,7 +26,7 @@ export function Img({
   zoomable,
   cover,
   ...props
-}: ImageProps & HTMLProps<HTMLDivElement>) {
+}: ImageProps & HTMLAttributes<HTMLDivElement>) {
   const imageElement = useRef<any>(null),
     [loaded, setLoaded] = useState(false),
     fadeIn = keyframes`

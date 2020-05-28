@@ -2,7 +2,7 @@
 to: src/components/<%%= name %%>/index.tsx
 ---
 import { css } from '@emotion/core';
-import React, { HTMLProps } from 'react';
+import React from 'react';
 <%% if (locals.props) { -%%>
 
 export type <%%= name %%>Props = {
@@ -10,7 +10,7 @@ export type <%%= name %%>Props = {
   /** <%%= prop.description %%> */
   <%%= prop.name %%>: <%%= prop.type %%>;
 <%% }) -%%>
-} & HTMLProps<HTMLDivElement>;
+};
 <%% } -%%>
 
 /**
@@ -22,7 +22,7 @@ export function <%%= name %%>(<%% if (locals.props) { %%>{
 <%% }) -%%>
   ...props
 }: <%%= name %%>Props
-<%% } else { -%%>props: HTMLProps<HTMLDivElement><%% } %%>) {
+<%% } else { -%%>props<%% } %%>) {
   return (
     <div css={css``} {...props}>
 

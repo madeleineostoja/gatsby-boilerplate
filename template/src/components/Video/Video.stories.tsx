@@ -1,6 +1,6 @@
+import { css } from '@emotion/core';
 import React from 'react';
 import { Video, VideoProps } from '.';
-import { css } from '@emotion/core';
 
 export default {
   title: 'Components/Video',

@@ -1,13 +1,13 @@
 import { css } from '@emotion/core';
 import React from 'react';
-import { Range as ReactRange, getTrackBackground } from 'react-range';
+import { getTrackBackground, Range as ReactRange } from 'react-range';
 
 export type RangeProps = {
   /** Value of the range input */
   value: number;
   /** Value display formatter */
   formatValue?(value: number): string;
-} & ReactRange['props'];
+} & Partial<ReactRange['props']>;
 
 /**
  * Custom range input

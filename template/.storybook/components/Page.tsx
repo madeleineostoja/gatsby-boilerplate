@@ -1,10 +1,10 @@
 import { css } from '@emotion/core';
-import React, { HTMLProps, ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 
 export function Page({
   children,
   ...props
-}: { children: ReactNode } & HTMLProps<HTMLDivElement>) {
+}: { children: ReactNode } & HTMLAttributes<HTMLDivElement>) {
   return (
     <main
       css={css`

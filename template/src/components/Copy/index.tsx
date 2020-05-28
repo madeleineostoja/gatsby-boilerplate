@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import React, { HTMLProps } from 'react';
+import React from 'react';
 import { RichText } from '../RichText';
 
 const MQ = {
@@ -13,7 +13,7 @@ export type CopyProps = {
   plaintext?: boolean;
   /** Whether to center the copy */
   centered?: boolean;
-} & HTMLProps<HTMLDivElement>;
+};
 
 /**
  * Consistent copy sizing and styles throughout the site <br />

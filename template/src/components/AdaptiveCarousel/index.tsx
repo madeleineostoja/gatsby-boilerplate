@@ -1,15 +1,8 @@
 import { css, keyframes } from '@emotion/core';
-import React, {
-  Children,
-  cloneElement,
-  ReactNode,
-  useRef,
-  useState,
-  HTMLProps
-} from 'react';
+import React, { Children, cloneElement, ReactNode, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { useBreakpoint } from '../../lib/hooks';
 import { subgrid } from 'satchel-css';
+import { useBreakpoint } from '../../lib/hooks';
 
 const EASEIN_LAG = 150,
   MQ = {
@@ -39,7 +32,7 @@ export type AdaptiveCarouelProps = {
   easeIn?: boolean;
   /** AdaptiveItems */
   children: AdaptiveItemProps;
-} & HTMLProps<HTMLDivElement>;
+};
 
 export type AdaptiveItemProps = {
   /** _{Inherited from AdaptiveCarousel}_ */
@@ -52,7 +45,7 @@ export type AdaptiveItemProps = {
   ready?: boolean;
   /** Content of the item */
   children?: ReactNode;
-} & HTMLProps<HTMLDivElement>;
+};
 
 /**
  * An adaptable grid -> carousel layout

@@ -1,5 +1,5 @@
-import { Link as GatsbyLink, GatsbyLinkProps } from 'gatsby';
-import React, { ReactNode, useEffect, useState, HTMLProps } from 'react';
+import { GatsbyLinkProps, Link as GatsbyLink } from 'gatsby';
+import React, { ReactNode, useEffect, useState } from 'react';
 
 function isInternal(url: string) {
   const tester = document.createElement('a');
@@ -15,7 +15,7 @@ export type LinkProps = {
   greedyActive?: boolean;
   /** Content of the link */
   children: ReactNode;
-} & HTMLProps<HTMLAnchorElement>;
+};
 
 /** Anchor that adapts to internal and external urls. Also has an 'active' state based on the page viewed */
 export function Link({

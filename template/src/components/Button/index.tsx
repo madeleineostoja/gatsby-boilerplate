@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import React, { HTMLProps, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { reset } from 'satchel-css';
 import { BREAKPOINTS } from '../../lib/css';
 import { Link, LinkProps } from '../Link';
@@ -19,7 +19,7 @@ export type ButtonProps = {
   children: ReactNode;
   /** Action to perform when clicked */
   onClick?(): void;
-} & (HTMLProps<HTMLButtonElement> | LinkProps | any);
+} & Partial<LinkProps>;
 
 /**
  * Adaptive button with themes and sizes. <br />

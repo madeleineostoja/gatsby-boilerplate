@@ -1,11 +1,11 @@
 import { css } from '@emotion/core';
-import React, { HTMLProps, useState } from 'react';
+import React, { useState } from 'react';
 import { ReactComponent as CheckIcon } from '../../../assets/icons/check.svg';
 
 export type CheckboxProps = {
   /** Label to display next to the checkbox */
   label?: string;
-} & HTMLProps<HTMLInputElement>;
+};
 
 /**
  * Custom checkbox form component

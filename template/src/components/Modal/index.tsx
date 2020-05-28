@@ -7,7 +7,7 @@ export type ModalProps = {
   className: string;
   /** Content of the modal */
   children: ReactNode;
-} & OverlayProps;
+} & Partial<OverlayProps>;
 
 /**
  * Modal component that shows a popup in-app

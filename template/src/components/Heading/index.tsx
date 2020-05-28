@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import React, { HTMLProps, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { BREAKPOINTS } from '../../lib/css';
 
 const MQ = {
@@ -12,7 +12,7 @@ export type HeadingProps = {
   secondary?: boolean;
   centered?: boolean;
   children: ReactNode;
-} & HTMLProps<HTMLHeadingElement>;
+};
 
 /**
  * Consistent copy sizing and styles throughout the site <br />

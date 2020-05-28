@@ -1,7 +1,7 @@
 import React from 'react';
 import { TwoUp, TwoUpProps } from '.';
-import { Heading } from '../Heading';
 import { Copy } from '../Copy';
+import { Heading } from '../Heading';
 
 export default {
   title: 'Components/TwoUp',

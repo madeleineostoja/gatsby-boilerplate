@@ -1,11 +1,11 @@
 import { css } from '@emotion/core';
 import React from 'react';
-import { reset } from 'satchel-css';
 import TextArea from 'react-textarea-autosize';
+import { reset } from 'satchel-css';
 
 export type TextareaProps = {
   rows?: number;
-} & any;
+} & Partial<TextArea['props']>;
 
 /**
  * Controlled text area that grows based on input

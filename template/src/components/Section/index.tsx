@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import React, { ReactNode, HTMLProps } from 'react';
+import React, { ReactNode } from 'react';
 import { subgrid } from 'satchel-css';
 
 export type SectionProps = {
@@ -11,7 +11,7 @@ export type SectionProps = {
   spacing?: 'default' | 'first' | 'last' | 'standalone';
   /** Content of the section */
   children: ReactNode;
-} & HTMLProps<HTMLDivElement>;
+};
 
 /**
  * Section component

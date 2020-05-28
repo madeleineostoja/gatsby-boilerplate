@@ -1,5 +1,5 @@
-import React, { ReactNode, HTMLProps } from 'react';
 import { css } from '@emotion/core';
+import React, { ReactNode } from 'react';
 
 export type TwoUpProps = {
   /** Content of the primary panel */
@@ -18,7 +18,7 @@ export type TwoUpProps = {
   centered?: boolean;
   /** Whether to use asymettrical panel sizing */
   asymmetrical?: boolean;
-} & HTMLProps<HTMLDivElement>;
+};
 
 /**
  * Adaptive two-column layout

@@ -1,17 +1,17 @@
 import { css } from '@emotion/core';
-import React, { ReactNode, HTMLProps } from 'react';
+import React, { ReactNode } from 'react';
 
 export type ToastContainerProps = {
   /** _{Inherited from ToastProvider}_ */
   hasToasts?: boolean;
-} & HTMLProps<HTMLDivElement>;
+};
 
 export type ToastProps = {
   /** _{Inherited from ToastProvider}_ */
   children: ReactNode;
   /** _{Inherited from ToastProvider}_ */
   transitionState?: string;
-} & HTMLProps<HTMLDivElement>;
+};
 
 /**
  * Toast notifications <br/>

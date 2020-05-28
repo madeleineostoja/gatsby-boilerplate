@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Modal, ModalProps } from '.';
 import { css } from '@emotion/core';
-import { Heading } from '../Heading';
+import React, { useState } from 'react';
+import { Modal } from '.';
 import { Copy } from '../Copy';
+import { Heading } from '../Heading';
 
 export default {
   title: 'Components/Modal',

@@ -6,18 +6,28 @@ export function Page({
   ...props
 }: { children: ReactNode } & HTMLAttributes<HTMLDivElement>) {
   return (
-    <main
+    <div
       css={css`
         display: grid;
-        grid-template-columns: var(--content-grid);
-        margin: -30px -20px 0;
+        grid-template-columns: var(--page-grid);
         & > * {
           grid-column: 2 / 3;
         }
       `}
-      {...props}
     >
-      {children}
-    </main>
+      <main
+        css={css`
+          display: grid;
+          grid-template-columns: var(--content-grid);
+          grid-gap: var(--margin);
+          & > * {
+            grid-column: 1 / -1;
+          }
+        `}
+        {...props}
+      >
+        {children}
+      </main>
+    </div>
   );
 }

@@ -12,6 +12,12 @@ Stories.defaultProps = {
 };
 
 // Global styles
+addDecorator(story => (
+  <>
+    <Global styles={styles} />
+    {story()}
+  </>
+));
 addParameters({
   docs: {
     container: ({ children, context }) => (
@@ -35,7 +41,8 @@ addParameters({
       colorPrimary: '<%= brandColor %>',
       colorSecondary: '<%= brandColor %>'
     }),
-    showRoots: true
+    showRoots: true,
+    viewMode: 'docs'
   }
 });
 

@@ -2,7 +2,7 @@ module.exports = [
   {
     type: 'input',
     name: 'type',
-    message: <%= source === 'prismic' ? 'Prismic type' : 'Page UID' %>
+    message: <%= source === 'prismic' ? `'Prismic type'` : `'Page UID'` %>
   },
   {
     type: 'confirm',

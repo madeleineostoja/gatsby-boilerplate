@@ -3,7 +3,7 @@ import { PageProps } from 'gatsby';
 import { LogoJsonLd } from 'gatsby-plugin-next-seo';
 import { shimmie } from 'pollen-css/utils';
 import React, { useEffect } from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { msGridRows } from 'satchel-css';
 <% if (components.includes('toasts')) { -%>
   import { ToastProvider } from 'react-toast-notifications';
@@ -29,7 +29,7 @@ export default function App({ children }: PageProps) {
   `;
 
   return (
-    <HelmetProvider>
+    <>
       <Global styles={globalStyles} />
 
       {/* Asset meta */}
@@ -72,6 +72,6 @@ export default function App({ children }: PageProps) {
 <% if (components.includes('toasts')) { -%>
       </ToastProvider>
 <% } -%>
-    </HelmetProvider>
+    </>
   );
 }

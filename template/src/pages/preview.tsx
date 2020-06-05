@@ -8,6 +8,7 @@ declare global {
   }
 }
 
+// Location prop needs to exist in scope for preview hook
 export default function PreviewPage({ location }: PageProps) {
   const [message, setMessage] = useState('Loading preview...'),
     { isPreview, previewData, path } = usePrismicPreview({

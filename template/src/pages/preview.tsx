@@ -1,6 +1,7 @@
 import { navigate, PageProps } from 'gatsby';
 import { usePrismicPreview } from 'gatsby-source-prismic';
 import React, { useEffect, useState } from 'react';
+import { resolveDocument } from '../lib/resolve';
 
 declare global {
   interface Window {
@@ -12,7 +13,8 @@ declare global {
 export default function PreviewPage({ location }: PageProps) {
   const [message, setMessage] = useState('Loading preview...'),
     { isPreview, previewData, path } = usePrismicPreview({
-      repositoryName: '<%= prismic %>'
+      repositoryName: '<%= prismic %>',
+      linkResolver: (): any => resolveDocument
     });
 
   useEffect(() => {

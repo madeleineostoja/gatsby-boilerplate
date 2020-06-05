@@ -11,7 +11,7 @@ declare global {
 export default function PreviewPage({ location }: PageProps) {
   const [message, setMessage] = useState('Loading preview...'),
     { isPreview, previewData, path } = usePrismicPreview({
-      repositoryName: 'bokeh'
+      repositoryName: '<%= prismic %>'
     });
 
   useEffect(() => {

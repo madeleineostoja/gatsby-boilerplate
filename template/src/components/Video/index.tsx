@@ -48,6 +48,7 @@ export function Video({
       muted={inline}
       playsinline={inline}
       controls={!inline}
+      playing={!!placeholder}
       {...props}
     />
   );

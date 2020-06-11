@@ -1,6 +1,8 @@
-import { navigate, PageProps } from 'gatsby';
-import { usePrismicPreview } from 'gatsby-source-prismic';
-import React, { useEffect, useState } from 'react';
+import {
+  withPreviewResolver,
+  WithPreviewResolverProps
+} from 'gatsby-source-prismic';
+import React, { useState } from 'react';
 import { resolveDocument } from '../lib/resolve';
 
 declare global {
@@ -9,23 +11,12 @@ declare global {
   }
 }
 
-// Location prop needs to exist in scope for preview hook
-export default function PreviewPage({ location }: PageProps) {
-  const [message, setMessage] = useState('Loading preview...'),
-    { isPreview, previewData, path } = usePrismicPreview({
-      repositoryName: '<%= prismic %>',
-      linkResolver: (): any => resolveDocument
-    });
-
-  useEffect(() => {
-    if (isPreview === false || !previewData) {
-      return;
-    }
-
-    window.__PRISMIC_PREVIEW_DATA__ = previewData;
-    navigate(path || '/');
-  }, [isPreview, previewData, path]);
-
+export default withPreviewResolver(PreviewPage as any, {
+  repositoryName: 'karimjoreige',
+  linkResolver: (): any => resolveDocument
+});
+function PreviewPage({ isPreview }: WithPreviewResolverProps) {
+  const [message, setMessage] = useState('Loading preview...');
   if (isPreview === false) {
     setMessage(`Can't find preview`);
   }

@@ -11,7 +11,7 @@ An opinionated and configurable boilerplate to quickly scaffold progressive, lig
 - Lightweight functional (styleless) base components
 - Automatic type generation and editor integration for GraphQL
 - Internal generators for pages and components (built on [Hygen](https://hygen.io))
-- Starter CSS design system (built on [Bloom](https://bloom.style))
+- Starter CSS design system (built on [Pollen](https://pollen.style))
 - [Storybook](https://storybook.js.org/) 5 preconfigured for Gatsby
 - [Prettier](https://prettier.io) configured out of the box
 - [Netlify](https://netlify.com) deployment configuration
@@ -31,7 +31,6 @@ An opinionated and configurable boilerplate to quickly scaffold progressive, lig
 - Forms (Range, Select, Textarea)
 - Video
 - Modal
-- Overlay
 - TwoUp
 - Toasts
 

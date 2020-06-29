@@ -12,7 +12,7 @@ declare global {
 }
 
 export default withPreviewResolver(PreviewPage as any, {
-  repositoryName: 'karimjoreige',
+  repositoryName: '<%= prismic %>',
   linkResolver: (): any => resolveDocument
 });
 function PreviewPage({ isPreview }: WithPreviewResolverProps) {

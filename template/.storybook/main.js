@@ -15,7 +15,15 @@ const CONFIG = {
       {
         removeMatch: '.svg',
         test: /\.svg$/,
-        use: ['@svgr/webpack', 'url-loader']
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              typescript: false
+            }
+          },
+          { loader: 'url-loader' }
+        ]
       }
     ]
   }

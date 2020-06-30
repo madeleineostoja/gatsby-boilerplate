@@ -1,6 +1,6 @@
 import { Global } from '@emotion/core';
 import { DocsContainer, Stories } from '@storybook/addon-docs/blocks';
-import { addParameters } from '@storybook/react';
+import { addParameters, addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import React from 'react';
 import icon from '../static/icon.png';

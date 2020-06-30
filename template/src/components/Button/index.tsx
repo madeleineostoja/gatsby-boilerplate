@@ -34,7 +34,7 @@ export function Button({
   children,
   ...props
 }: ButtonProps) {
-  const Element = href ? Link : 'button';
+  const Element: any = href ? Link : 'button';
   return (
     <Element
       css={[

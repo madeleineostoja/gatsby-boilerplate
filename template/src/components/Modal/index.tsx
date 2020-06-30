@@ -4,7 +4,7 @@ import { Overlay, OverlayProps } from 'react-portal-overlay';
 
 export type ModalProps = {
   /** Content of the modal */
-  className: string;
+  className?: string;
   /** Content of the modal */
   children: ReactNode;
 } & Partial<OverlayProps>;

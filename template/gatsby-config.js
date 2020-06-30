@@ -58,9 +58,6 @@ const CONFIG = {
   layout: {
     component: require.resolve(`./src/containers/App/index.tsx`)
   },
-  svgr: {
-    typescript: false
-  },
   polyfill: {
     features: ['IntersectionObserver'],
   },
@@ -110,10 +107,7 @@ module.exports = {
       resolve: 'gatsby-plugin-next-seo',
       options: CONFIG.seo
     },
-    {
-      resolve: 'gatsby-plugin-svgr',
-      options: CONFIG.svgr
-    },
+    resolve: 'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-plugin-nprogress',
       options: CONFIG.nprogress

@@ -7,6 +7,8 @@ export type RangeProps = {
   value: number;
   /** Value display formatter */
   formatValue?(value: number): string;
+  /** Callback to call on value change */
+  onChange?(value: number): void;
 } & Partial<ReactRange['props']>;
 
 /**
@@ -36,7 +38,7 @@ export function Range({
               colors: ['var(--color-primary)', 'var(--color-grey-100)']
             })};
           `}
-          {...{min, max, ...props}}
+          {...{ min, max, ...props }}
         >
           {children}
         </div>

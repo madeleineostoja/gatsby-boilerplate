@@ -1,18 +1,19 @@
 import { css } from '@emotion/core';
 import React from 'react';
-import TextArea from 'react-textarea-autosize';
+import ReactTextArea from 'react-textarea-autosize';
 import { reset } from 'satchel-css';
 
-export type TextareaProps = {
+export type TextAreaProps = {
   rows?: number;
-} & Partial<TextArea['props']>;
+} & Partial<ReactTextArea['props']> &
+  any;
 
 /**
  * Controlled text area that grows based on input
  */
-export function Textarea({ rows = 6, ...props }: TextareaProps) {
+export function TextArea({ rows = 6, ...props }: TextAreaProps) {
   return (
-    <TextArea
+    <ReactTextArea
       css={css`
         ${reset('input')}
         width: 100%;

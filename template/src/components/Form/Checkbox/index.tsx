@@ -5,6 +5,10 @@ import { ReactComponent as CheckIcon } from '../../../assets/icons/check.svg';
 export type CheckboxProps = {
   /** Label to display next to the checkbox */
   label?: string;
+  /** Classname to apply to checkbox */
+  className?: string;
+  /** HTML ID to give to the checkbox */
+  id?: string;
 };
 
 /**

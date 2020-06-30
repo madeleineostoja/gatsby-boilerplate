@@ -1,10 +1,10 @@
 import React from 'react';
-import { Textarea, TextareaProps } from '.';
+import { TextArea, TextAreaProps } from '.';
 
 export default {
-  title: 'Components/Form/Textarea',
-  component: Textarea
+  title: 'Components/Form/TextArea',
+  component: TextArea
 };
-export const Default = (props: TextareaProps) => (
-  <Textarea placeholder="Type a message" {...props} />
+export const Default = (props: TextAreaProps) => (
+  <TextArea placeholder="Type a message" {...props} />
 );

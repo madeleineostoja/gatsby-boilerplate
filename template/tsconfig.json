@@ -17,7 +17,7 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true
   },
-  "include": ["./src/**/*", "types/**/*"],
+  "include": [src", "@types"],
   "plugins": [
     {
       "name": "ts-graphql-plugin",

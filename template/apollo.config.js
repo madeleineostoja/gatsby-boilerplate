@@ -1,6 +1,6 @@
 module.exports = {
   client: {
-    name: 'kerbly',
+    name: '<%= name %>',
     tagName: 'graphql',
     includes: ['./src/**/*.{ts,tsx}', './schemas/_generated/gatsby.graphql'],
     service: {

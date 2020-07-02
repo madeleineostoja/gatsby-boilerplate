@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import React, { ReactNode } from 'react';
 import { reset } from 'satchel-css';
-import { BREAKPOINTS } from '../../lib/css';
+import { BREAKPOINTS } from '../../lib/consts';
 import { Link, LinkProps } from '../Link';
 
 export type ButtonProps = {

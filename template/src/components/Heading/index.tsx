@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 import React, { ReactNode } from 'react';
-import { BREAKPOINTS } from '../../lib/css';
+import { BREAKPOINTS } from '../../lib/consts';
 
 const MQ = {
   mobile: `min-width: ${BREAKPOINTS.mobile}em`,

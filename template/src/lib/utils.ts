@@ -12,3 +12,13 @@ export function resolveUrl(link: string, source: string) {
 
   return !/^https?:\/\//i.test(link) ? url.resolve(source, link) : link;
 }
+
+/**
+ * Helper to update CSS variables
+ * @param properties Object of CSS properties
+ */
+export function setProperties(properties: any) {
+  Object.keys(properties).forEach((property: string) =>
+    document.documentElement.style.setProperty(property, properties[property])
+  );
+}

@@ -23,6 +23,7 @@ export function Select(props: ReactSelect['props']) {
     `,
     option: (provided, { isFocused, isSelected }) => css`
       padding: var(--spacing-00);
+      cursor: pointer;
       &:hover {
         background: var(--color-blue-300);
       }

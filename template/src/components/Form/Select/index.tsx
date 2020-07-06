@@ -1,6 +1,7 @@
 import { css } from '@emotion/core';
 import React from 'react';
 import ReactSelect, { Styles } from 'react-select';
+import { inputStyles } from '../';
 
 /**
  * Custom select form input
@@ -8,6 +9,7 @@ import ReactSelect, { Styles } from 'react-select';
 export function Select(props: ReactSelect['props']) {
   const styles = {
     control: (provided, { isFocused }) => css`
+      ${inputStyles}
       display: flex;
       align-items: center;
       justify-content: space-between;

@@ -68,6 +68,7 @@ export function Button({
         disabled &&
           css`
             pointer-events: none;
+            user-select: none;
             background: var(--color-grey-300);
             color: var(--color-grey-700);
           `

@@ -47,7 +47,7 @@ const CONFIG = {
   },
 <% } -%>
   typeGen: {
-    outputPath: `./types/gatsby.d.ts`,
+    outputPath: `./@types/gatsby.d.ts`,
     emitSchema: {
       './schemas/_generated/gatsby.json': true
     },

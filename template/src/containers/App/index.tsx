@@ -9,7 +9,7 @@ import { msGridRows } from 'satchel-css';
   import { ToastProvider } from 'react-toast-notifications';
   import { Toast, ToastContainer } from '../../components/Toast';
   <% } -%>
-import globalStyles from './styles';
+import globalStyles from '../../styles';
 
 /**
  * App container

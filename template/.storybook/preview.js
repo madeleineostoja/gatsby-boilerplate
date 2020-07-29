@@ -4,7 +4,7 @@ import { addParameters, addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import React from 'react';
 import icon from '../static/icon.png';
-import styles from '../src/containers/App/styles';
+import styles from '../src/styles';
 
 // Change title of stories
 Stories.defaultProps = {
